@@ -13,16 +13,16 @@ function Brands() {
         </div>
 
         <div className="box-subset">
-          <img src={require("../assets/aboutusimage2.jpg")} alt=""/>
+          <img src={require("../assets/aboutusimage5.png")} alt=""/>
         </div>
 
         <div className="box-subset">
-          <img src={require("../assets/aboutusimage3.jpg")} alt=""/>
+          <img src={require("../assets/aboutusimage6.png")} alt=""/>
 
         </div>
 
         <div className="box-subset">
-          <img src={require("../assets/aboutusimage4.jpeg")} alt=""/>
+          <img src={require("../assets/aboutusimage7.png")} alt=""/>
         </div>
 
       </div>

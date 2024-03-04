@@ -66,7 +66,8 @@ function Product() {
     }
     return false;
   });*/
-
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
   return (
     <>
       <div className="templateContainer">
@@ -134,8 +135,8 @@ function Product() {
         </div>
       </div>
       <div className='info--section bg-indigo-950 text-white text-center flex'>
-        <p>&copy; 2016 Gallops Systems and Solutions</p>
-      </div>
+        <p>&copy; {currentYear} Gallops Systems and Solutions</p>
+      </div>          
     </>
   );
 }

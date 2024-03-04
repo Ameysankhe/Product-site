@@ -103,9 +103,6 @@ function App() {
         <Route path='/pharmaceutical-cold-storage-construction-service' element={<>
         <Pharmastorage /> </>} />
 
-        {/*<Route path='/dairy-cold-storage' element={<>
-        <Heat /> </>} />*/}
-
         <Route path='/contact' element={<>
         <Contact />
         </>} />

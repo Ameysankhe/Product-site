@@ -2,13 +2,13 @@ import React from 'react';
 import '../Footer.css'
 
 function Footer() {
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
   return (
     <div className='Footer'>
       <div className='main--section bg-indigo-900 flex justify-around text-white'>
-        <div className='footer--section flex text-justify'>
-          <a href='#'>
+        <div className='footer--section flex text-justify'>      
             <img className='footer--image w-20 h-8' src={require('../assets/address.png')} alt="Address" />
-          </a>
           <div className="footer--text">
             <p className="main--text">Reach us</p>
             <p className='second--text'>207, Jaivijay Industrial Estate, Bapane Village, off NH8, Naigoan (E) Thane - 401208, Maharashtra, India Maharashtra, India</p>
@@ -35,7 +35,7 @@ function Footer() {
       </div>
 
       <div className='info--section bg-indigo-950 text-white text-center flex'>
-        <p>&copy; 2016 Gallops Systems and Solutions</p>
+        <p>&copy; {currentYear} Gallops Systems and Solutions</p>
       </div>
     </div>
   );

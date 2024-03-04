@@ -38,11 +38,6 @@ export const SendEmail = async ({ fullName,email,phone,message, setSend }) => {
     try {
         const datas = {fullName,email,phone,message};
         let res = await axios.post(`/send`, datas);
-        //let res = await axios.post(`http://localhost:5000/send`, datas);
-        /*if(res) {
-            setSend(res.data);
-            //alert(datas);
-        }*/
         if (res && res.data !== undefined) {
             setSend(res.data);
         } else {
@@ -50,6 +45,5 @@ export const SendEmail = async ({ fullName,email,phone,message, setSend }) => {
         }
     } catch (error) {
         alert("Response or response data is undefined or null.");
-        //alert(error.response.data.message);
     }
 };

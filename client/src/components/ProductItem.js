@@ -3,13 +3,13 @@ import '../ProductItem.css'
 
 const ProductItem = ({img1,img2,img3,img4,title,description,f1,f2,f3,f4,f5,f6,f7}) => {
 
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
     const [activeImg, setActiveImage] = useState(img1)
 
     return (
     <div>
         <div className='product--container flex flex-col justify-between lg:flex-row  lg:items-center '>
-            {/*gap-16
-            gap-6*/}
             <div className='mobile-centre flex flex-col  lg:w-2/4 '>
                 <img src={activeImg} alt="image" className='product--main--image h-full aspect-square object-cover no-max-width' />
                 <div className='mt-10 flex flex-row justify-between gap-6 h-24'>
@@ -23,7 +23,6 @@ const ProductItem = ({img1,img2,img3,img4,title,description,f1,f2,f3,f4,f5,f6,f7
             {/* ABOUT */}
             <div className='inside-mobile outside-mobile text-field product--text--feild flex flex-col gap-4'>
                 <div>
-                    {/* <span className=' text-violet-600 font-semibold'>Special Sneaker</span> */}
                     <h1 className=' text-2xl font-bold'>{title}</h1>
                 </div>
                 <p className='description w-90 text-gray-700 justified-text'>
@@ -45,8 +44,8 @@ const ProductItem = ({img1,img2,img3,img4,title,description,f1,f2,f3,f4,f5,f6,f7
             
         </div>
         <div className='info--section bg-indigo-950 text-white text-center flex'>
-        <p>&copy; 2016 Gallops Systems and Solutions</p>
-      </div>
+            <p>&copy; {currentYear} Gallops Systems and Solutions</p>
+        </div>
       </div>
     )
 }

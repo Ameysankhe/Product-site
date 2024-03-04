@@ -8,7 +8,4 @@ function Loading() {
   );
 }
 
-//Deleted code
-//<div className="text-6xl text-main"></div>
-
 export default Loading;

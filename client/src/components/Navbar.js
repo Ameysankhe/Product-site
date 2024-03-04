@@ -24,13 +24,6 @@ const navLinks = [
         link: "/contact",
     },
 ];
-//style={{ backgroundColor: '#333' }}
-//Deleted code
-//<a key={index}  className="list text-gray-800 transition-all duration-500 hover:bg-gray-600 hover:text-white px-3 py-2 text-md font-medium" href={link.link}></a>
-//<button type="button" onClick={handleMenu} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-//<a key={index}  className="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href={link.link}>
-//<a key={index}  className="list text-black transform hover:scale-125 transition duration-300 px-3 py-2 text-md font-medium" href={link.link}>
-//<a key={index}  className="text-black block px-3 py-2 rounded-md text-base font-medium" href={link.link}>
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -86,7 +79,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-//Remember
-//Body color was changed for this page and now it is same
-//Change All gray to other color

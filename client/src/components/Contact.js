@@ -11,15 +11,12 @@ import {
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../Contact.css'
-/* import Toast from './components/Toast'; */
-//import Navbar from './components/Navbar';
-
-//const InputClass = "w-full py-4 placeholder:text-gray px-6 text-main border-2 mt-2 border-border rounded-md"
-//<input value={phone} onChange={(e) => setPhone(e.target.value)} required type='tel' placeholder='8924134890' className="placeholder:text-gray text-main col-span-7 px-3" />
 
 const InputClass = "w-full py-4 placeholder:text-gray px-6 text-orange-400 border-2 mt-2 border-border rounded-md"
 
 function Contact() {
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState();
@@ -39,8 +36,6 @@ function Contact() {
   let output = result && result.find((x) => x.country_name === country);
   let outputResult = output && output.dialling_code;
   let phoneFull = outputResult && outputResult.concat(phone);
-
-  //console.log(phoneFull);
 
   useEffect(() => {
     if (!ipData & !countries) {
@@ -68,28 +63,12 @@ function Contact() {
     e.preventDefault();
     setButtonLoading(true);
     if (!fullNameError & !emailError & !phoneError & !messageError) {
-        //console.log("ok");
         SendEmail({fullName,email,phone:phoneFull,message, setSend}).then( () => {
         setButtonLoading(false);
         }
       );
     }
   };
-  //console.log(send);
-
-  //console.log(fullNameError);
-
-  //console.log(ipData);
-
-  //console.log(countries);
-
-  // Deleted HTML Code
-  //<img src='/gallops_logo.jpg' className='w-16 h-16 object-cover' alt='logo' />
-  //<h1 className='my-4 text-xl'>Gallops System And Solutions </h1>
-  //<div className="box-1 bg-main flex-colo py-6 sm:py-0">
-  //<button type='submit' disabled={buttonLoading && true} className='w-full border-2 border-main hover:bg-white trans bg-main mt-6 rounded-md tracking-widest py-4 font-subMain font-bold'></button>
-  //<textarea value={message} onChange={(e) => setMessage(e.target.value)} required placeholder='How can we help you' rows={3} className='mt-2 w-full border-2 border-border py-4 placeholder:text-gray px-6 text-main rounded-md' />
-  //bg-gradient-to-r from-amber-500 to-indigo-500
 
   return (
     <div>
@@ -168,8 +147,8 @@ function Contact() {
       }
     </div>
     <div className='info--section bg-indigo-950 text-white text-center flex'>
-        <p>&copy; 2016 Gallops Systems and Solutions</p>
-      </div>
+        <p>&copy; {currentYear} Gallops Systems and Solutions</p>
+    </div>
     </>
     </div>
   );
