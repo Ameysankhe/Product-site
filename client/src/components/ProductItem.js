@@ -5,13 +5,14 @@ const ProductItem = ({img1,img2,img3,img4,title,description,f1,f2,f3,f4,f5,f6,f7
 
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
+    
     const [activeImg, setActiveImage] = useState(img1)
 
     return (
     <div>
         <div className='product--container flex flex-col justify-between lg:flex-row  lg:items-center '>
             <div className='mobile-centre flex flex-col  lg:w-2/4 '>
-                <img src={activeImg} alt="image" className='product--main--image h-full aspect-square object-cover no-max-width' />
+                <img src={activeImg} alt="" className='product--main--image h-full aspect-square object-cover no-max-width' />
                 <div className='mt-10 flex flex-row justify-between gap-6 h-24'>
                     <img src={img1} alt="" className='product--image--1 w-14 h-16 rounded-md cursor-pointer secondary--image' onClick={() => setActiveImage(img1)} />
                     <img src={img2} alt="" className='product--image--2 w-14 h-16 rounded-md cursor-pointer secondary--image' onClick={() => setActiveImage(img2)} />

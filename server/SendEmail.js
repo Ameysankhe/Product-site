@@ -2,10 +2,7 @@ import nodemailer from 'nodemailer';
 
 const Email = (options) => {
     let transpoter = nodemailer.createTransport({
-        service:"hotmail", //i use outlook
-        //host: 'smtp.gmail.com',
-        //port: 587,
-        //secure: true,
+        service:"hotmail",
         auth:{
             user:process.env.USER, //user or email
             pass:process.env.PASSWORD//password
@@ -18,11 +15,6 @@ const Email = (options) => {
         }
     });
 };
-
-// Deleted HTML code
-// <img
-//src="https://res.cloudinary.com/zpune/image/upload/v1652256707/random/favicon_hybtfj.png"
-//<div style="width: 100%; background-color: #00efbc; padding: 20px 0">
 
 // send email
 const EmailSender = ({fullName,email,phone,message}) => {
