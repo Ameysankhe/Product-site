@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        //gray: "#C6C6C6",
         main: "#00EFBC",
         subMain: "#F3F9FF",
         border: "#F1F8FF",
@@ -25,9 +24,6 @@ module.exports = {
   },
 };
 
-// Deleted colors
-// #00EFBC
-//gray for hamburger menu
 
 
 

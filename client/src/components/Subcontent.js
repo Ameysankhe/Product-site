@@ -9,13 +9,21 @@ const Subcontent = () => {
           <div className='product-text'>
             <h3>Services</h3>
           </div>
-          <div className="image-row" data-aos="fade-up">
-              <img src={require("../assets/Product14.jpg")} alt="Image 1" />
-              <img src={require("../assets/Design.jpg")} alt="Image 2" />
-          </div>
-          <div className="image-center" data-aos="fade-up">
-            <img src={require("../assets/Maintenance.jpg")} alt="Image 3" />
-
+          <div className="image-row-parent" data-aos="fade-up">
+            <div className='image-row-child'>
+              <div className='image-row'>
+                <img src={require("../assets/Product14.jpg")} alt="Image 1" />
+                <p>Installation</p>
+              </div>
+              <div className='image-row'>
+                <img src={require("../assets/Design.jpg")} alt="Image 2" />
+                <p>Design</p>
+              </div>
+            </div>
+            <div className='image-row'>
+              <img src={require("../assets/Maintenance.jpg")} alt="Image 3" />
+              <p>Maintenance</p>
+            </div>
           </div>
         </div>
         <div className="text-content">

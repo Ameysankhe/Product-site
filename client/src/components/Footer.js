@@ -11,7 +11,7 @@ function Footer() {
             <img className='footer--image w-20 h-8' src={require('../assets/address.png')} alt="Address" />
           <div className="footer--text">
             <p className="main--text">Reach us</p>
-            <p className='second--text'>207, Jaivijay Industrial Estate, Bapane Village, off NH8, Naigoan (E) Thane - 401208, Maharashtra, India Maharashtra, India</p>
+            <p className='second--text'>The Platina, 7th Floor / 401, Tanvi Complex, S V Road, New Petrol Pump, Dahisar (E) Mumbai - 400068.</p>
           </div>
         </div>
 

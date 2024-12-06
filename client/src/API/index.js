@@ -37,7 +37,7 @@ export const GetCountries = async ({ setLoading, setCountries }) => {
 export const SendEmail = async ({ fullName,email,phone,message, setSend }) => {
     try {
         const datas = {fullName,email,phone,message};
-        let res = await axios.post(`/send`, datas);
+        let res = await axios.post(`http://localhost:5000/send`, datas);
         if (res && res.data !== undefined) {
             setSend(res.data);
         } else {

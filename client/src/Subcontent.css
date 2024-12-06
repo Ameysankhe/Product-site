@@ -10,42 +10,43 @@ body{
   align-items: flex-start;
 }
 
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .aside-content {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
 
+.image-row-child{
+  display: flex;
+  flex-direction: row;
+}
+
 .image-row {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2rem;
   margin-left: 5rem;
 }
 
-.image-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5rem;
-}
-
 .image-row img {
-  width: 50%;
   border: 1px solid #101010;
   border-radius: 5px;
   height: 10rem;
   margin-left: 2rem;
+  padding: 10px;
 }
 
-.image-center img {
-width: 50%;
-border: 1px solid #0f0e0e;
-border-radius: 5px;
-height: 10rem;
-margin-bottom: 2rem;
+.image-row p{
+  text-align: center;
+  /* margin-top: 0.5rem; */
 }
 
 .text-content {
@@ -65,12 +66,7 @@ margin-bottom: 2rem;
   font-size: 24px;
   margin-bottom: 2rem;
   margin-top: 0.5rem;
-}
-
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  margin-left: 7rem;
 }
 
 .list-items li{
@@ -126,6 +122,14 @@ ul li::before {
   padding-right: 2rem;
 }
 
+.product-text h3{
+  margin-left: 0;
+}
+
+.image-row-child{
+  display: flex;
+  flex-direction: column;
+}
 
 .image-row img, .image-center img {
   display: flex;
@@ -140,17 +144,27 @@ ul li::before {
   margin-top: 1rem;
 }
 
-.product-range-text h3{
-  margin: 0;
-  padding: 0;
-  margin-left: 3rem;
-  margin-bottom: 1rem;
+.image-row p{
+  margin-top: 0.5rem;
 }
 
 .product-text h3{
   font-size: 24px;
   margin-bottom: 0;
   text-align: center;
+}
+
+.text-content{
+  padding-left: 1rem;
+}
+
+.product-range-text h3{
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .list-items{
@@ -164,10 +178,6 @@ ul li::before {
 
 .view-all-button{
   margin: 0;
-}
-
-.text-content{
-  padding-left: 1rem;
 }
 
 .aside-content{
@@ -186,16 +196,5 @@ ul li::before {
 .image-row img{
   margin-left: 0;
 }
-
-.image-center{
-  margin-left: 5px;
-  margin-right: 6px;
-}
-
-.image-center img{
-  width: 100%;
-  margin-top: 1rem;
-}
-
 
 }
