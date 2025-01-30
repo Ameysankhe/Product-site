@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../Product.css";
 import data from "./TemplateData.json";
@@ -57,37 +57,12 @@ function getImagePath(imageFileName) {
 }
 
 function Product() {
-  /*const [searchTerm, setSearchTerm] = useState("");
-  const filteredData = data.filter((val) => {
-    if (searchTerm === "") {
-      return true;
-    } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-      return true;
-    }
-    return false;
-  });*/
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   return (
     <>
       <div className="templateContainer">
-        {/*<div className="searchInput_Container">
-          <input
-            id="searchInput"
-            type="text"
-            placeholder="Search here..."
-            autoComplete="off"
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
-            }}
-          />
-          </div>*/}
         <div className="template_Container">
-          {/*{filteredData.length === 0 ? (
-            <div className="render-text">
-              No results found for your search.
-            </div>
-          ) : (*/}
             {data.map((val) => (
               <div className="template" key={val.id} data-aos="fade-up">
               <Link to={getImagePath(val.image)}>

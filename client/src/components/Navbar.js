@@ -20,7 +20,7 @@ const navLinks = [
         link: "/products",
     },
     {
-        title: "Contact US",
+        title: "Contact Us",
         link: "/contact",
     },
 ];

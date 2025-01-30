@@ -90,13 +90,13 @@ function Contact() {
             {/* fullName */}
             <div className='my-6'>
               <label>FullName</label>
-              <input value={fullName} onChange={(e) => setFullName(e.target.value)} required type='text' placeholder='User Doe' className={InputClass} />
+              <input value={fullName} onChange={(e) => setFullName(e.target.value)} required type='text' placeholder='User Doe' className={InputClass} autoComplete='off'/>
               {fullNameError && <InlineError error={fullNameError} />}
             </div>
             {/* email */}
             <div className='my-6'>
               <label>Email</label>
-              <input value={email} onChange={(e) => setEmail(e.target.value)} required type='eamil' placeholder='example@gmail.com' className={InputClass} />
+              <input value={email} onChange={(e) => setEmail(e.target.value)} required type='eamil' placeholder='example@gmail.com' className={InputClass} autoComplete='off'/>
               {emailError && <InlineError error={emailError} />}
             </div>
             {/* phone */}
@@ -115,14 +115,14 @@ function Contact() {
                 <div className='tracking-widest col-span-2 border-x-2 border-border flex-colo'>
                   {outputResult}
                 </div>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} required type='tel' placeholder='8924134890' className="placeholder:text-gray text-orange-400 col-span-7 px-3" />
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} required type='tel' placeholder='8924134890' className="placeholder:text-gray text-orange-400 col-span-7 px-3" autoComplete='off'/>
               </div>
               {phoneError && <InlineError error={phoneError} />}
               </div>
             {/* message */}
             <div className='my-6'>
               <label>Message</label>
-              <textarea value={message} onChange={(e) => setMessage(e.target.value)} required placeholder='How can we help you' rows={3} className='mt-2 w-full border-2 border-border py-4 placeholder:text-gray px-6 text-orange-400 rounded-md' />
+              <textarea value={message} onChange={(e) => setMessage(e.target.value)} required placeholder='How can we help you' rows={3} className='mt-2 w-full border-2 border-border py-4 placeholder:text-gray px-6 text-orange-400 rounded-md' autoComplete='off'/>
               {messageError && <InlineError error={messageError} />}
             </div>
             {/* submit */}
