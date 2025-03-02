@@ -1,8 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    RewriteCond %{REQUEST_URI} ^/(about|client|rip|cold_storage_cabin_constructionservc|pharmaceutical-cold-storage-constructionservc)(/)?$ [NC]
-    RewriteRule .* https://gallops.co.in/ [R=301,L]
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
