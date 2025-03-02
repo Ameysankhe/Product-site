@@ -3,7 +3,7 @@ import axios from 'axios';
 // ******** Get IP address ********
 export const IpAddress = async ({ setLoading, setIpData }) => {
     try {
-        let res = await axios.get(`http://api.ipstack.com/check?access_key=${process.env.REACT_APP_IP_ADDRESS_API_KEY}`);
+        let res = await axios.get(`https://api.ipstack.com/check?access_key=${process.env.REACT_APP_IP_ADDRESS_API_KEY}`);
 
         if(res) {
             setLoading(false)
@@ -37,7 +37,7 @@ export const GetCountries = async ({ setLoading, setCountries }) => {
 export const SendEmail = async ({ fullName,email,phone,message, setSend }) => {
     try {
         const datas = {fullName,email,phone,message};
-        let res = await axios.post(`http://localhost:5000/send`, datas);
+        let res = await axios.post(`https://product-site-kdnu.onrender.com/send`, datas);
         if (res && res.data !== undefined) {
             setSend(res.data);
         } else {
